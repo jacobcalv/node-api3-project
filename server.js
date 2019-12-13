@@ -6,11 +6,8 @@ const moment = require('moment')
 
 server.use(logger);
 server.use(express.json());
-server.use('/api/users', userRouter);
+server.use('/', userRouter);
 
-server.get('/', (req, res) => {
-  res.send(`<h2>Let's write some middleware!</h2>`);
-});
 
 //custom middleware
 
